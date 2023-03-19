@@ -28,9 +28,5 @@ def go_to_my_pets():
         EC.presence_of_element_located((By.CSS_SELECTOR, "button[type='submit']")))
     pytest.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
 
-    # element = WebDriverWait(pytest.driver, 10).until(
-    #     EC.presence_of_element_located((By.CSS_SELECTOR, "button[class='navbar-toggler-icon']")))
-    # pytest.driver.find_element(By.CSS_SELECTOR, 'button[class="navbar-toggler-icon"]').click()
-
     element = WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.LINK_TEXT, "Мои питомцы")))
     pytest.driver.find_element(By.LINK_TEXT, "Мои питомцы").click()
